@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foods",
+  "info": {
+    "name": "Food"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "foods"
+    },
+    "Meal": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
