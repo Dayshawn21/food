@@ -24,8 +24,8 @@
       "collection": "category",
       "via": "foods"
     },
-    "Meal": {
-      "collection": "file",
+    "dish": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -34,6 +34,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "qty": {
+      "type": "integer"
     }
   }
 }
